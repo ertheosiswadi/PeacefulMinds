@@ -1,2 +1,2 @@
-# PeacfulMinds
+# PeacefulMinds
 ios app for APIC competition
