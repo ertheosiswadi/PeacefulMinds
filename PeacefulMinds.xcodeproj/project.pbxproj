@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25836E5E1FAAF6EA5BBDDB10 /* Pods_PeacefulMinds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C2EC96E6BE1AF2A1E7F2F4 /* Pods_PeacefulMinds.framework */; };
 		A01E413C21A3918E00EF03B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E413B21A3918E00EF03B5 /* AppDelegate.swift */; };
 		A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E413D21A3918E00EF03B5 /* ViewController.swift */; };
-		A01E414121A3918E00EF03B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01E413F21A3918E00EF03B5 /* Main.storyboard */; };
-		A01E414321A3918F00EF03B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01E414221A3918F00EF03B5 /* Assets.xcassets */; };
+		A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01E414221A3918F00EF03B5 /* logo.xcassets */; };
 		A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */; };
+		A079608621A395410062678C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A079608521A395410062678C /* Main.storyboard */; };
+		A079609021A39B3A0062678C /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079608F21A39B3A0062678C /* InitialViewController.swift */; };
+		A079609221A39BD50062678C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609121A39BD50062678C /* MenuViewController.swift */; };
+		A079609421A39D790062678C /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609321A39D790062678C /* HelperExtensions.swift */; };
+		A079609621A39FED0062678C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609521A39FED0062678C /* LoginViewController.swift */; };
+		A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */; };
+		A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609921A3A2550062678C /* SignUpViewController.swift */; };
+		A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A079609B21A3A2D50062678C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0766382AC154AB8162939156 /* Pods-PeacefulMinds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeacefulMinds.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds.release.xcconfig"; sourceTree = "<group>"; };
+		94C2EC96E6BE1AF2A1E7F2F4 /* Pods_PeacefulMinds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeacefulMinds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97377EE2AC8CFE5F305E596C /* Pods-PeacefulMinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeacefulMinds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds.debug.xcconfig"; sourceTree = "<group>"; };
 		A01E413821A3918E00EF03B5 /* PeacefulMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeacefulMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01E413B21A3918E00EF03B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01E413D21A3918E00EF03B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A01E414021A3918E00EF03B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A01E414221A3918F00EF03B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A01E414221A3918F00EF03B5 /* logo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = logo.xcassets; sourceTree = "<group>"; };
 		A01E414521A3918F00EF03B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01E414721A3918F00EF03B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A079608521A395410062678C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A079608F21A39B3A0062678C /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		A079609121A39BD50062678C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A079609321A39D790062678C /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		A079609521A39FED0062678C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		A079609921A3A2550062678C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A079609B21A3A2D50062678C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25836E5E1FAAF6EA5BBDDB10 /* Pods_PeacefulMinds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AD4BA7DAF10F1D8FC0B0FAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94C2EC96E6BE1AF2A1E7F2F4 /* Pods_PeacefulMinds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A01E412F21A3918E00EF03B5 = {
 			isa = PBXGroup;
 			children = (
 				A01E413A21A3918E00EF03B5 /* PeacefulMinds */,
 				A01E413921A3918E00EF03B5 /* Products */,
+				BA673B69D100BACF858ED7EF /* Pods */,
+				1AD4BA7DAF10F1D8FC0B0FAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,30 @@
 		A01E413A21A3918E00EF03B5 /* PeacefulMinds */ = {
 			isa = PBXGroup;
 			children = (
+				A079608521A395410062678C /* Main.storyboard */,
 				A01E413B21A3918E00EF03B5 /* AppDelegate.swift */,
 				A01E413D21A3918E00EF03B5 /* ViewController.swift */,
-				A01E413F21A3918E00EF03B5 /* Main.storyboard */,
-				A01E414221A3918F00EF03B5 /* Assets.xcassets */,
+				A079608F21A39B3A0062678C /* InitialViewController.swift */,
+				A079609121A39BD50062678C /* MenuViewController.swift */,
+				A079609321A39D790062678C /* HelperExtensions.swift */,
+				A079609521A39FED0062678C /* LoginViewController.swift */,
+				A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */,
+				A079609921A3A2550062678C /* SignUpViewController.swift */,
+				A01E414221A3918F00EF03B5 /* logo.xcassets */,
 				A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */,
 				A01E414721A3918F00EF03B5 /* Info.plist */,
+				A079609B21A3A2D50062678C /* GoogleService-Info.plist */,
 			);
 			path = PeacefulMinds;
+			sourceTree = "<group>";
+		};
+		BA673B69D100BACF858ED7EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97377EE2AC8CFE5F305E596C /* Pods-PeacefulMinds.debug.xcconfig */,
+				0766382AC154AB8162939156 /* Pods-PeacefulMinds.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A01E414A21A3918F00EF03B5 /* Build configuration list for PBXNativeTarget "PeacefulMinds" */;
 			buildPhases = (
+				2D9A5A55FA7806AEFEE311B2 /* [CP] Check Pods Manifest.lock */,
 				A01E413421A3918E00EF03B5 /* Sources */,
 				A01E413521A3918E00EF03B5 /* Frameworks */,
 				A01E413621A3918E00EF03B5 /* Resources */,
+				850F6A456A59D092075F6CDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,34 +170,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */,
-				A01E414321A3918F00EF03B5 /* Assets.xcassets in Resources */,
-				A01E414121A3918E00EF03B5 /* Main.storyboard in Resources */,
+				A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */,
+				A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */,
+				A079608621A395410062678C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D9A5A55FA7806AEFEE311B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeacefulMinds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		850F6A456A59D092075F6CDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A01E413421A3918E00EF03B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A079609621A39FED0062678C /* LoginViewController.swift in Sources */,
+				A079609021A39B3A0062678C /* InitialViewController.swift in Sources */,
+				A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */,
 				A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */,
+				A079609421A39D790062678C /* HelperExtensions.swift in Sources */,
 				A01E413C21A3918E00EF03B5 /* AppDelegate.swift in Sources */,
+				A079609221A39BD50062678C /* MenuViewController.swift in Sources */,
+				A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A01E413F21A3918E00EF03B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A01E414021A3918E00EF03B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,6 +373,7 @@
 		};
 		A01E414B21A3918F00EF03B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97377EE2AC8CFE5F305E596C /* Pods-PeacefulMinds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +392,7 @@
 		};
 		A01E414C21A3918F00EF03B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0766382AC154AB8162939156 /* Pods-PeacefulMinds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

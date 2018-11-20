@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Firebase
+
+let primaryColor = UIColor(red: 0/255, green: 180/255, blue: 219/255, alpha: 1)
+let secondaryColor = UIColor(red: 0/255, green: 131/255, blue: 176/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
         return true
     }
 
