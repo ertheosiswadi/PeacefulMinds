@@ -126,6 +126,9 @@ The following is a sample output of what you might see:
 ```javascript
 [{"part1":[{"price":100,"name":"s1","i_adj":50,"post_adj":50},{"price":200,"name":"s2","i_adj":120,"post_adj":80},{"name":"s3","price":300,"i_adj":210,"post_adj":90}],"part_2":{"total_post_adj":220,"deductible":50,"insurance_coverage":"50%","isDeductibleLessThan":true,"total_owe":135,"isInNetwork":true}},{"part1":[{"price":100,"name":"s1","i_adj":40,"post_adj":60},{"price":200,"name":"s2","i_adj":96,"post_adj":104},{"price":300,"name":"s3","i_adj":168,"post_adj":132}],"part_2":{"total_post_adj":296,"deductible":50,"insurance_coverage":"40%","isDeductibleLessThan":true,"total_owe":148.4,"isInNetwork":false}}, ... ]
 ```
+The output shown is in a JSON format. Please do not let the curly braces intimidate you.:kissing_heart:\
+you can simply go to this [link](https://jsonformatter.curiousconcept.com/) and paste the JSON text there\
+so you can see it more clearly
 
 ### Extracting Information for a specific Hospital
 This will display the same information as the one above but for only the hospital specified
