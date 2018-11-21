@@ -51,7 +51,7 @@ e.g.
 ```
 U9YT65420Y
 ```
-In this example, the user is subscribed to *plan_2*
+In this example, the user is subscribed to *plan_2* because the last character is **Y**
 
 ## Something to look out for
 anytime you see something like this:
