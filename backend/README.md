@@ -69,6 +69,8 @@ becomes
 ```
 
 ## Alright, let's look at the endpoints and get our hands dirty
+### Domain
+```www.website.com```
 
 ### Creating a new user
 To create a new user you need the following information:
@@ -80,9 +82,9 @@ To create a new user you need the following information:
 
 endpoint:
 ```
-website.com/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provider
+/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provider
 ```
-e.g.
+e.g. (this is something you put in your browser)
 ```
 website.com/add_user/ronaldreagan/happyreagan123/90024/PO1238y0/ip_1
 ```
@@ -104,7 +106,7 @@ We will extract the necessary information to create our table of results, given 
 
 endpoint:
 ```
-website.com/:username/:procedure
+/:username/:procedure
 ```
 e.g.
 ```
@@ -120,7 +122,7 @@ This will display the same information as the one above but for only the hospita
 
 endpoint:
 ```
-website.com/:username/:procedure/:hospital
+/:username/:procedure/:hospital
 ```
 e.g.
 ```
