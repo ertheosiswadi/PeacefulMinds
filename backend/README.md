@@ -7,7 +7,7 @@ to access it simply go to [link](https://console.firebase.google.com)
 * click on the project **firebase-auth-test**
 * on the left hand pane click on **database**
 * then choose **Cloud Firestore**, NOT **Real Time Database**
-* voila
+* voila (don't be afraid to click stuff, you won't destroy the database *fingers crossed*)
 
 ## A Little Bit about the Database so you can use my endpoints
 Currently the database has 3 collections
