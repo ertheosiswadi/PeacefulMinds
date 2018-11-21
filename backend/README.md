@@ -108,6 +108,7 @@ If the account is successfully created, you will see a
 ```
 ronaldreagan account created
 ```
+you will then see a new user entry in the firebase console, as it is updated automatically
 
 **Reminder:** It is very important that you use the available names for hospital and insurance_provider, because there is no error checking!
 ### Extracting Information for All Hospitals 
