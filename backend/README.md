@@ -42,8 +42,8 @@ anytime you see something like this:
 ```
 /:keyword
 ```
-the ':keyword' is a placeholder for a value you're supposed to fill
-it means that you're supposed to replace ':keyword'
+the ':keyword' is a placeholder for a value you're supposed to fill. It means that you're supposed to replace ':keyword'
+
 e.g.
 ```
 /:hospital
