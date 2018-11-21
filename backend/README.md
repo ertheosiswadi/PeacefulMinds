@@ -70,7 +70,7 @@ becomes
 
 ## Alright, let's look at the endpoints and get our hands dirty
 ### Domain
-```www.website.com```
+```https://peaceful-minds.herokuapp.com```
 
 ### Creating a new user
 To create a new user you need the following information:
@@ -86,7 +86,7 @@ endpoint:
 ```
 e.g. (this is something you put in your browser)
 ```
-website.com/add_user/ronaldreagan/happyreagan123/90024/PO1238y0/ip_1
+https://peaceful-minds.herokuapp.com/add_user/ronaldreagan/happyreagan123/90024/PO1238y0/ip_1
 ```
 this will add a user with the 
 * username: ronaldreagan
@@ -110,7 +110,7 @@ endpoint:
 ```
 e.g.
 ```
-website.com/ronaldreagan/procedure_2
+https://peaceful-minds.herokuapp.com/ronaldreagan/procedure_2
 ```
 The following is a sample output of what you might see:
 ```javascript
@@ -126,7 +126,7 @@ endpoint:
 ```
 e.g.
 ```
-website.com/ronaldreagan/procedure_2/hospital_8
+https://peaceful-minds.herokuapp.com/ronaldreagan/procedure_2/hospital_8
 ```
 The following is a sample output of what you might see:
 ```javascript
