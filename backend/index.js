@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 var path = require('path');
 
+const PORT = process.env.PORT || 3000
+
 app.use(express.static('./public'));
 
 app.get('', (request, response)=>{
@@ -38,7 +40,7 @@ app.get('/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provide
 });
 
 
-app.listen(3000, ()=> {
+app.listen(PORT, ()=> {
 	console.log('server is live');
 });
 
