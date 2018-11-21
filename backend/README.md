@@ -1,5 +1,13 @@
 # Peaceful Minds Backend
 
+```diff
+- DO NOT USE MY ENDPOINTS INCORRECTLY. MAKE SURE YOU PUT IN THE CORRECT VALUES THAT ACTUALLY EXIST.
+- THERE IS A GOOD CHANCE THAT MY SERVER WILL BREAK BECAUSE THERE IS NO ERROR CHECKING
+``` 
+:sob::sob::sob::sob:
+``` diff
+- JUST LMK AND I CAN RESTART THE SERVER
+```
 ## Viewing the Database from Firebase
 All the members have been sent an invitation to view the fake database created in Firebase
 to access it simply go to [link](https://console.firebase.google.com)
