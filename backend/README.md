@@ -130,6 +130,8 @@ The output shown is in a JSON format. Please do not let the curly braces intimid
 you can simply go to this [link](https://jsonformatter.curiousconcept.com/) and paste the JSON text there\
 so you can see it more clearly
 
+What is JSON and how to read it [link](https://developers.squarespace.com/what-is-json)
+
 ### Extracting Information for a specific Hospital
 This will display the same information as the one above but for only the hospital specified
 
