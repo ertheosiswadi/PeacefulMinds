@@ -2,13 +2,26 @@ const express = require('express');
 const app = express();
 var path = require('path');
 
+const PORT = process.env.PORT || 3000
+
 app.use(express.static('./public'));
 
 app.get('', (request, response)=>{
 	response.send('this is the homepage, it does nothing');
 })
 
+app.get('/same_area/:username/:procedure', (request, response)=> {
+	console.log('im here 1')
+	var u = request.params.username;
+	var p = request.params.procedure;
+	console.log(u, p, 'im here')
+	generateAllTablesInSameArea(u, p).then((result)=>{
+		response.send(result);
+	});	
+});
+
 app.get('/:username/:procedure/:hospital', (request, response)=> {
+	console.log('im here 0')
 	var u = request.params.username;
 	var p = request.params.procedure;
 	var h = request.params.hospital;
@@ -17,9 +30,12 @@ app.get('/:username/:procedure/:hospital', (request, response)=> {
 	});	
 });
 
+
 app.get('/:username/:procedure', (request, response)=> {
+	console.log('im here 2')
 	var u = request.params.username;
 	var p = request.params.procedure;
+	console.log(u, p, 'im here')
 	generateAllTables(u, p).then((result)=>{
 		response.send(result);
 	});	
@@ -27,6 +43,7 @@ app.get('/:username/:procedure', (request, response)=> {
 
 //this really is actually a post lol
 app.get('/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provider',(request,response)=>{
+	console.log('im here 3')
 	var u = request.params.username;
 	var p = request.params.password;
 	var z = parseInt(request.params.zipcode);
@@ -38,12 +55,12 @@ app.get('/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provide
 });
 
 
-app.listen(3000, ()=> {
+app.listen(PORT, ()=> {
 	console.log('server is live');
 });
 
 var firebase = require('firebase-admin');
-var serviceAccount = require('/home/esiswadi/Documents/fir-auth-test-private-key.json');
+var serviceAccount = require('./fir-auth-test-private-key.json');
 
 firebase.initializeApp({
   credential: firebase.credential.cert(serviceAccount),
@@ -82,6 +99,7 @@ async function getUser(username)
 			toReturn = user;
 		}
 		else{
+			console.log(username)
 			console.log('user dun exist');
 		}
 	});
@@ -228,16 +246,37 @@ async function generateAllTables(username, procedure){
 	return toReturn;
 }
 
-async function getOONFEE(hospital)
+async function getHospitalDetails(hospital)
 {
-	var toReturn;
+	var toReturn = {};
 	await db.collection('hospital').doc(hospital).get().then((doc)=> {
 		var data = doc.data();
-		toReturn = data['OON_fee'];
+		toReturn['oonfee'] = data['OON_fee'];
+		toReturn['name'] = data['name'];
+		toReturn['zipcode'] = data['zipcode']
 	})
 	return toReturn;
 }
 
+async function generateAllTablesInSameArea(username, procedure){
+	var toReturn = [];
+	var h_name;
+	var result;
+	var i = 0;
+	for(i = 0; i < 10; i++)
+	{
+		h_name = 'hospital_' + i;
+		await generateHospitalTable(username, procedure, h_name).then((result)=>{
+			// console.log('result-> ' + result + ' <-')
+			if(result['isInSameArea'])
+			{
+				toReturn.push(result);
+			}
+		})
+		// console.log('im here')
+	}
+	return toReturn;
+}
 
 async function generateHospitalTable(username, procedure, hospital)
 {
@@ -246,7 +285,9 @@ async function generateHospitalTable(username, procedure, hospital)
 	var coverage;
 	var table_1 = [];
 	var isInNetwork;
-	var OON_fee;
+	var OON_fee, hospital_name, hospital_zipcode;
+
+	OON_fee = 0
 
 	await getUser(username).then((data) => {
 		user = data;
@@ -257,8 +298,10 @@ async function generateHospitalTable(username, procedure, hospital)
 	await getAllInsuranceAdjustments(user.insurance_plan, user.insurance_provider).then((data)=>{
 		insurance_adjs = data;
 	});
-	await getOONFEE(hospital).then((data)=>{
-		OON_fee = data;
+	await getHospitalDetails(hospital).then((data)=>{
+		OON_fee = data['oonfee'];
+		hospital_name = data['name']
+		hospital_zipcode = data['zipcode']
 	})
 	await isHospitalInNetwork(hospital, user.insurance_provider).then((data)=>{
 		isInNetwork = data;
@@ -312,9 +355,20 @@ async function generateHospitalTable(username, procedure, hospital)
 
 	var toReturn = {
 		part1: table_1,
-		part_2: table_2
+		part_2: table_2,
+		name: hospital_name,
+		isInSameArea: isInSameArea(user.zipcode, hospital_zipcode)
 	}
 	return toReturn;
+}
+
+function isInSameArea(zip_user, zip_hospital)
+{
+	if(zip_user == zip_hospital)
+	{
+		return true
+	}
+	return false
 }
 
 // generateHospitalTable('ertheosiswadi', 'procedure_1', 'hospital_0').then((result)=>{
