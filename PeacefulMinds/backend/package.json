@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for peaceful minds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ertheosiswadi/peacefulminds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ertheosiswadi/peacefulminds/issues"
+  },
+  "homepage": "https://github.com/ertheosiswadi/peacefulminds#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase-admin": "^6.2.0"
+  }
+}

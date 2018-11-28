@@ -1,0 +1,568 @@
+const hospital = {
+	name: 'hospital',
+	zipcode: 90024,
+};
+
+const hospitalsRef = db.collection('hospital');
+const ipref = db.collection('insurance_providers');
+
+// ----------------  Add 10 hospitals done -----------------
+
+// var promise = new Promise((resolve, reject) => {
+// 	var zipcode = 90020;
+// 	for (i = 0; i < 10; i++) {
+// 		var name = 'hospital_' + i;
+// 		zipcode += i;
+// 		var h = {
+// 			name: name,
+// 			zipcode: zipcode,
+// 		};
+// 		db.collection('hospital').doc(name).set(h).then(() => {
+// 			console.log('new hospital written to database');
+// 			resolve();
+// 		});	
+// 	}
+// });
+
+
+// promise.then((result) => {
+// 	db.collection('hospital').get().then((snapshot)=>{
+// 		snapshot.forEach(function(doc){
+// 			console.log(doc.id, '-> ', doc.data());
+// 		})
+// 	});		
+// })
+// ----------------  Add 10 hospitals done -----------------
+const procedure_2_1 = {
+	service : {
+		4 : {
+			name: 's5',
+			price: 250
+		},
+		1 : {
+			name: 's2',
+			price: 200
+		},
+		2 : {
+			name: 's3',
+			price: 300
+		}				
+	}
+}
+const procedure_2_0 = {
+	service : {
+		0 : {
+			name: 's1',
+			price: 100
+		},
+		1 : {
+			name: 's3',
+			price: 300
+		},
+		4: {
+			name: 's5',
+			price: 300
+		}					
+	}
+}
+
+const procedure_3_0 = {
+	service : {
+		0 : {
+			name: 's1',
+			price: 100
+		},
+		1 : {
+			name: 's2',
+			price: 200
+		},
+		2 : {
+			name: 's3',
+			price: 300
+		},
+		3 : {
+			name: 's4',
+			price: 100
+		},
+		5 : {
+			name: 's6',
+			price: 100
+		},
+		6 : {
+			name: 's7',
+			price: 100
+		}							
+	}
+}
+const procedure_3_1 = {
+	service : {
+		0 : {
+			name: 's1',
+			price: 100
+		},
+		1 : {
+			name: 's2',
+			price: 200
+		},
+		2 : {
+			name: 's3',
+			price: 300
+		},
+		8 : {
+			name: 's9',
+			price: 600
+		},							
+	}
+}
+const procedure_3_2 = {
+	service : {
+		0 : {
+			name: 's1',
+			price: 100
+		},
+		1 : {
+			name: 's2',
+			price: 200
+		},
+		2 : {
+			name: 's3',
+			price: 300
+		},
+		3 : {
+			name: 's4',
+			price: 20
+		},
+		5 : {
+			name: 's6',
+			price: 120
+		},
+		6 : {
+			name: 's7',
+			price: 100
+		},
+		7 : {
+			name: 's8',
+			price: 50
+		},
+		8 : {
+			name: 's9',
+			price: 550
+		}																
+	}
+}
+
+const plan_1_0 = {
+	0 : {
+		name: 's1',
+		coverage: 50
+	},
+	1 : {
+		name: 's2',
+		coverage: 60
+	},
+	2 : {
+		name: 's3',
+		coverage: 70
+	},
+	3 : {
+		name: 's4',
+		coverage: 80
+	},
+	4 : {
+		name: 's5',
+		coverage: 50
+	},
+	5 : {
+		name: 's6',
+		coverage: 30
+	},
+	6 : {
+		name: 's7',
+		coverage: 40
+	},
+	7 : {
+		name: 's8',
+		coverage: 90
+	},
+	8 : {
+		name: 's9',
+		coverage: 30
+	},
+	9 : {
+		name: 's10',
+		coverage: 80
+	},
+}
+
+const plan_2_0 = {
+	0 : {
+		name: 's1',
+		coverage: 90
+	},
+	1 : {
+		name: 's2',
+		coverage: 95
+	},
+	2 : {
+		name: 's3',
+		coverage: 100
+	},
+	3 : {
+		name: 's4',
+		coverage: 100
+	},
+	4 : {
+		name: 's5',
+		coverage: 100
+	},
+	5 : {
+		name: 's6',
+		coverage: 100
+	},
+	6 : {
+		name: 's7',
+		coverage: 100
+	},
+	7 : {
+		name: 's8',
+		coverage: 90
+	},
+	8 : {
+		name: 's9',
+		coverage: 100
+	},
+	9 : {
+		name: 's10',
+		coverage: 80
+	},
+}
+
+const plan_1_1 = {
+	0 : {
+		name: 's1',
+		coverage: 50
+	},
+	1 : {
+		name: 's2',
+		coverage: 66
+	},
+	2 : {
+		name: 's3',
+		coverage: 77
+	},
+	3 : {
+		name: 's4',
+		coverage: 88
+	},
+	4 : {
+		name: 's5',
+		coverage: 44
+	},
+	5 : {
+		name: 's6',
+		coverage: 44
+	},
+	6 : {
+		name: 's7',
+		coverage: 55
+	},
+	7 : {
+		name: 's8',
+		coverage: 88
+	},
+	8 : {
+		name: 's9',
+		coverage: 22
+	},
+	9 : {
+		name: 's10',
+		coverage: 80
+	},
+}
+
+const plan_2_1 = {
+	0 : {
+		name: 's1',
+		coverage: 90
+	},
+	1 : {
+		name: 's2',
+		coverage: 90
+	},
+	2 : {
+		name: 's3',
+		coverage: 90
+	},
+	3 : {
+		name: 's4',
+		coverage: 90
+	},
+	4 : {
+		name: 's5',
+		coverage: 90
+	},
+	5 : {
+		name: 's6',
+		coverage: 90
+	},
+	6 : {
+		name: 's7',
+		coverage: 90
+	},
+	7 : {
+		name: 's8',
+		coverage: 90
+	},
+	8 : {
+		name: 's9',
+		coverage: 100
+	},
+	9 : {
+		name: 's10',
+		coverage: 90
+	},
+}
+
+const plan_1_2 = {
+	0 : {
+		name: 's1',
+		coverage: 50
+	},
+	1 : {
+		name: 's2',
+		coverage: 60
+	},
+	2 : {
+		name: 's3',
+		coverage: 24
+	},
+	3 : {
+		name: 's4',
+		coverage: 50
+	},
+	4 : {
+		name: 's5',
+		coverage: 50
+	},
+	5 : {
+		name: 's6',
+		coverage: 35
+	},
+	6 : {
+		name: 's7',
+		coverage: 40
+	},
+	7 : {
+		name: 's8',
+		coverage: 66
+	},
+	8 : {
+		name: 's9',
+		coverage: 44
+	},
+	9 : {
+		name: 's10',
+		coverage: 80
+	},
+}
+
+const plan_2_2 = {
+	0 : {
+		name: 's1',
+		coverage: 95
+	},
+	1 : {
+		name: 's2',
+		coverage: 95
+	},
+	2 : {
+		name: 's3',
+		coverage: 95
+	},
+	3 : {
+		name: 's4',
+		coverage: 95
+	},
+	4 : {
+		name: 's5',
+		coverage: 95
+	},
+	5 : {
+		name: 's6',
+		coverage: 95
+	},
+	6 : {
+		name: 's7',
+		coverage: 95
+	},
+	7 : {
+		name: 's8',
+		coverage: 90
+	},
+	8 : {
+		name: 's9',
+		coverage: 95
+	},
+	9 : {
+		name: 's10',
+		coverage: 80
+	},
+}
+
+
+var in_network_hospitals_0 = {}
+var in_network_hospitals_1 = {}
+var in_network_hospitals_2 = {}
+
+var i;
+for(i = 0, j = 0; i < 10; i+= 2, j++)
+{
+	in_network_hospitals_0[j] = 'hospital_' + i;
+}
+for(i = 0, j = 0; i < 10; i+= 3, j++)
+{
+	in_network_hospitals_1[j] = 'hospital_' + i;
+}
+for(i = 0, j = 0; j < 10; i+= 3, j++)
+{
+	in_network_hospitals_2[j] = 'hospital_' + j;
+}
+console.log(in_network_hospitals_0);
+console.log(in_network_hospitals_1);
+console.log(in_network_hospitals_2);
+
+ipref.doc('ip_1').collection('in_hospitals').doc('in_hospitals').set(in_network_hospitals_0);
+ipref.doc('ip_2').collection('in_hospitals').doc('in_hospitals').set(in_network_hospitals_1);
+ipref.doc('ip_3').collection('in_hospitals').doc('in_hospitals').set(in_network_hospitals_2);
+
+// ipref.doc('ip_1').collection('plans').doc('plan_1').set(plan_1_0);
+// ipref.doc('ip_1').collection('plans').doc('plan_2').set(plan_2_0);
+// ipref.doc('ip_2').collection('plans').doc('plan_1').set(plan_1_1);
+// ipref.doc('ip_2').collection('plans').doc('plan_2').set(plan_2_1);
+// ipref.doc('ip_3').collection('plans').doc('plan_1').set(plan_1_2);
+// ipref.doc('ip_3').collection('plans').doc('plan_2').set(plan_2_2);
+
+// var i = 0;
+// for(i = 0; i < 5; i++)
+// {
+// 	hospitalsRef.doc('hospital_' + i).update({
+// 		OON_fee : 20
+// 	})
+// }
+// for(i = 5; i < 10; i++)
+// {
+// 	hospitalsRef.doc('hospital_' + i).update({
+// 		OON_fee : 25
+// 	})
+// }
+
+// var i = 0;
+// for(i = 0; i < 3; i++)
+// {
+// 	db.collection('hospital').doc('hospital_' + i).collection('procedures').doc('procedure_3').set(procedure_3_0)
+// }
+// for(i = 3; i < 6; i++)
+// {
+// 	db.collection('hospital').doc('hospital_' + i).collection('procedures').doc('procedure_3').set(procedure_3_1)
+// }
+// for(i = 6; i < 10; i++)
+// {
+// 	db.collection('hospital').doc('hospital_' + i).collection('procedures').doc('procedure_3').set(procedure_3_2)
+// }
+// var i = 0;
+// for(i = 0; i < 5; i++)
+// {
+// 	db.collection('hospital').doc('hospital_' + i).collection('procedures').doc('procedure_2').set(procedure_2_0)
+// }
+// for(i = 5; i < 10; i++)
+// {
+// 	db.collection('hospital').doc('hospital_' + i).collection('procedures').doc('procedure_2').set(procedure_2_1)
+// }
+
+
+// const hospital_ids = [];
+// var promise = new Promise((resolve, reject) => {
+// 	db.collection('hospital').get().then((snapshot)=>{
+// 		snapshot.forEach(function(doc){
+// 			// console.log(doc.id, '-> ', doc.data());
+// 			hospital_ids.push(doc.id);
+// 			resolve();
+// 		});
+// 	});	
+// });
+// promise.then((result) => {
+// 	hospital_ids.forEach((id) => {
+// 		console.log(id);
+// 		db.collection('hospital').doc(id).collection('procedures').doc('procedure_1').set(procedure_1);
+// 	})
+// });
+
+
+// const procedure_3 = {
+// 	service : {
+// 		0 : {
+// 			name: 's1',
+// 			price: 100
+// 		},
+// 		1 : {
+// 			name: 's2',
+// 			price: 200
+// 		},
+// 		2 : {
+// 			name: 's3',
+// 			price: 300
+// 		},
+// 		3 : {
+// 			name: 's4',
+// 			price: 100
+// 		},
+// 		4 : {
+// 			name: 's5',
+// 			price: 100
+// 		},
+// 		5 : {
+// 			name: 's6',
+// 			price: 100
+// 		}							
+// 	}
+// }
+
+// const hospitalsRef = db.collection('hospital');
+
+
+// db.collection('hospital').get().then((snapshot)=>{
+// 	snapshot.forEach(function(doc){
+// 		const hospitalRef = hospitalsRef.doc(doc.id);
+// 		const proceduresRef = hospitalRef.collection('procedures');
+// 		proceduresRef.get().then((snapshot) => {
+// 			snapshot.forEach(function(procedure) {
+
+// 			})
+// 		})
+// 		db.collection('hospital')
+// 	});
+// });	
+
+// db.collection('hospital').doc('axVYcMaGddh1dqqT4tOm').collection('procedures').add(procedure).then(()=>{
+// 	console.log('new procedure written to database');
+	
+// 	db.collection('hospital').doc('axVYcMaGddh1dqqT4tOm').collection('procedures').get().then((snapshot)=>{
+// 		snapshot.forEach(function(doc){
+// 			console.log(doc.id, '-> ', doc.data());
+// 		})
+// 	});	
+// })
+
+
+const coverage = {
+	coverage: 90
+}
+
+// db.collection('insurance_providers').doc('ip_1').collection('coverage').doc('plan_1').set(coverage);
+// db.collection('insurance_providers').doc('ip_1').collection('coverage').doc('plan_2').set(coverage);
+
+// db.collection('insurance_providers').doc('ip_2').collection('coverage').doc('plan_1').set(coverage);
+// db.collection('insurance_providers').doc('ip_2').collection('coverage').doc('plan_2').set(coverage);
+
+// db.collection('insurance_providers').doc('ip_3').collection('coverage').doc('plan_1').set(coverage);
+db.collection('insurance_providers').doc('ip_3').collection('coverage').doc('plan_2').set(coverage);

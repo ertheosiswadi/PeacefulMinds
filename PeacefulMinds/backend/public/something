@@ -1,0 +1,9 @@
+getInsuranceAdjustments('plan_1', 'ip_1').then((result) => {
+	console.log(result);
+})
+getServicesForProcedure('hospital_1', 'procedure_3').then((result) => {
+	console.log(result);
+});
+getInsuranceCoverage('plan_1', 'ip_1').then((result) => {
+	console.log(result);
+})
