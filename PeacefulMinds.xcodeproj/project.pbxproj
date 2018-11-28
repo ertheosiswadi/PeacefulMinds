@@ -12,6 +12,11 @@
 		A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E413D21A3918E00EF03B5 /* ViewController.swift */; };
 		A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01E414221A3918F00EF03B5 /* logo.xcassets */; };
 		A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */; };
+		A078590F21AE424400AF7E6B /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078590E21AE424400AF7E6B /* BillViewController.swift */; };
+		A078591221AE516F00AF7E6B /* sample_bill.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A078591121AE516F00AF7E6B /* sample_bill.pdf */; };
+		A078591421AE54B100AF7E6B /* sample_bill.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A078591321AE54B100AF7E6B /* sample_bill.pdf */; };
+		A078591721AE8FB800AF7E6B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A078591621AE8D1200AF7E6B /* Montserrat-Regular.ttf */; };
+		A078591821AE8FBA00AF7E6B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A078591521AE8D1200AF7E6B /* Montserrat-SemiBold.ttf */; };
 		A079608621A395410062678C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A079608521A395410062678C /* Main.storyboard */; };
 		A079609021A39B3A0062678C /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079608F21A39B3A0062678C /* InitialViewController.swift */; };
 		A079609221A39BD50062678C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609121A39BD50062678C /* MenuViewController.swift */; };
@@ -20,6 +25,10 @@
 		A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */; };
 		A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609921A3A2550062678C /* SignUpViewController.swift */; };
 		A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A079609B21A3A2D50062678C /* GoogleService-Info.plist */; };
+		A0D5D10221AD44C30032CD27 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */; };
+		A0D5D10421AD4F690032CD27 /* HospitalTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5D10321AD4F690032CD27 /* HospitalTableView.xib */; };
+		A0D5D10621AD4FC90032CD27 /* HospitalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D10521AD4FC90032CD27 /* HospitalTableView.swift */; };
+		A0D5D10821ADEC230032CD27 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D10721ADEC230032CD27 /* APIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,11 @@
 		A01E414221A3918F00EF03B5 /* logo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = logo.xcassets; sourceTree = "<group>"; };
 		A01E414521A3918F00EF03B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01E414721A3918F00EF03B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A078590E21AE424400AF7E6B /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		A078591121AE516F00AF7E6B /* sample_bill.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample_bill.pdf; sourceTree = "<group>"; };
+		A078591321AE54B100AF7E6B /* sample_bill.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample_bill.pdf; sourceTree = "<group>"; };
+		A078591521AE8D1200AF7E6B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		A078591621AE8D1200AF7E6B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "Montserrat/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		A079608521A395410062678C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A079608F21A39B3A0062678C /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		A079609121A39BD50062678C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +54,10 @@
 		A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
 		A079609921A3A2550062678C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A079609B21A3A2D50062678C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		A0D5D10321AD4F690032CD27 /* HospitalTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalTableView.xib; sourceTree = "<group>"; };
+		A0D5D10521AD4FC90032CD27 /* HospitalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableView.swift; sourceTree = "<group>"; };
+		A0D5D10721ADEC230032CD27 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +83,7 @@
 		A01E412F21A3918E00EF03B5 = {
 			isa = PBXGroup;
 			children = (
+				A078591021AE4E1500AF7E6B /* PDF */,
 				A01E413A21A3918E00EF03B5 /* PeacefulMinds */,
 				A01E413921A3918E00EF03B5 /* Products */,
 				BA673B69D100BACF858ED7EF /* Pods */,
@@ -83,21 +102,37 @@
 		A01E413A21A3918E00EF03B5 /* PeacefulMinds */ = {
 			isa = PBXGroup;
 			children = (
+				A078591321AE54B100AF7E6B /* sample_bill.pdf */,
 				A079608521A395410062678C /* Main.storyboard */,
+				A079609521A39FED0062678C /* LoginViewController.swift */,
+				A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */,
 				A01E413B21A3918E00EF03B5 /* AppDelegate.swift */,
 				A01E413D21A3918E00EF03B5 /* ViewController.swift */,
 				A079608F21A39B3A0062678C /* InitialViewController.swift */,
 				A079609121A39BD50062678C /* MenuViewController.swift */,
 				A079609321A39D790062678C /* HelperExtensions.swift */,
-				A079609521A39FED0062678C /* LoginViewController.swift */,
 				A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */,
 				A079609921A3A2550062678C /* SignUpViewController.swift */,
+				A0D5D10521AD4FC90032CD27 /* HospitalTableView.swift */,
+				A0D5D10321AD4F690032CD27 /* HospitalTableView.xib */,
 				A01E414221A3918F00EF03B5 /* logo.xcassets */,
 				A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */,
 				A01E414721A3918F00EF03B5 /* Info.plist */,
 				A079609B21A3A2D50062678C /* GoogleService-Info.plist */,
+				A0D5D10721ADEC230032CD27 /* APIHelper.swift */,
+				A078590E21AE424400AF7E6B /* BillViewController.swift */,
+				A078591621AE8D1200AF7E6B /* Montserrat-Regular.ttf */,
+				A078591521AE8D1200AF7E6B /* Montserrat-SemiBold.ttf */,
 			);
 			path = PeacefulMinds;
+			sourceTree = "<group>";
+		};
+		A078591021AE4E1500AF7E6B /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				A078591121AE516F00AF7E6B /* sample_bill.pdf */,
+			);
+			path = PDF;
 			sourceTree = "<group>";
 		};
 		BA673B69D100BACF858ED7EF /* Pods */ = {
@@ -169,10 +204,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A078591721AE8FB800AF7E6B /* Montserrat-Regular.ttf in Resources */,
 				A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */,
 				A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */,
+				A078591421AE54B100AF7E6B /* sample_bill.pdf in Resources */,
 				A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */,
+				A0D5D10421AD4F690032CD27 /* HospitalTableView.xib in Resources */,
+				A078591821AE8FBA00AF7E6B /* Montserrat-SemiBold.ttf in Resources */,
 				A079608621A395410062678C /* Main.storyboard in Resources */,
+				A078591221AE516F00AF7E6B /* sample_bill.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,15 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PeacefulMinds-checkManifestLockResult.txt",
 			);
@@ -206,16 +242,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -237,9 +269,13 @@
 				A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */,
 				A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */,
 				A079609421A39D790062678C /* HelperExtensions.swift in Sources */,
+				A078590F21AE424400AF7E6B /* BillViewController.swift in Sources */,
+				A0D5D10221AD44C30032CD27 /* ResultsViewController.swift in Sources */,
 				A01E413C21A3918E00EF03B5 /* AppDelegate.swift in Sources */,
 				A079609221A39BD50062678C /* MenuViewController.swift in Sources */,
 				A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */,
+				A0D5D10821ADEC230032CD27 /* APIHelper.swift in Sources */,
+				A0D5D10621AD4FC90032CD27 /* HospitalTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

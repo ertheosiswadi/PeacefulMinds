@@ -14,10 +14,13 @@ import Firebase
 class SignUpViewController:UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var iidField: UITextField!
+    @IBOutlet weak var ipField: UITextField!
+    @IBOutlet weak var zipcodeField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var dismissButton: UIButton!
     
+    let apihelper = APIHelper.init()
     var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
     
@@ -45,11 +48,11 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         view.addSubview(activityView)
         
         usernameField.delegate = self
-        emailField.delegate = self
+        iidField.delegate = self
         passwordField.delegate = self
         
         usernameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        iidField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
@@ -65,7 +68,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         usernameField.resignFirstResponder()
-        emailField.resignFirstResponder()
+        iidField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
         NotificationCenter.default.removeObserver(self)
@@ -97,16 +100,16 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     }
     
     /**
-     Enables the continue button if the **username**, **email**, and **password** fields are all non-empty.
+     Enables the continue button if the **username**, **iid**, and **password** fields are all non-empty.
      
      - Parameter target: The targeted **UITextField**.
      */
     
     @objc func textFieldChanged(_ target:UITextField) {
         let username = usernameField.text
-        let email = emailField.text
+        let iid = iidField.text
         let password = passwordField.text
-        let formFilled = username != nil && username != "" && email != nil && email != "" && password != nil && password != ""
+        let formFilled = username != nil && username != "" && iid != nil && iid != "" && password != nil && password != ""
         setContinueButton(enabled: formFilled)
     }
     
@@ -119,10 +122,10 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         switch textField {
         case usernameField:
             usernameField.resignFirstResponder()
-            emailField.becomeFirstResponder()
+            iidField.becomeFirstResponder()
             break
-        case emailField:
-            emailField.resignFirstResponder()
+        case iidField:
+            iidField.resignFirstResponder()
             passwordField.becomeFirstResponder()
             break
         case passwordField:
@@ -150,16 +153,26 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     
     @objc func handleSignUp() {
         guard let username = usernameField.text else { return }
-        guard let email = emailField.text else { return }
+        guard let iid = iidField.text else { return }
         guard let pass = passwordField.text else { return }
+        guard let ip = ipField.text else { return }
+        guard let zipcode = zipcodeField.text else { return }
+        
+        print(username, iid, ip, zipcode, pass)
         
         setContinueButton(enabled: false)
         continueButton.setTitle("", for: .normal)
         activityView.startAnimating()
         
+        self.apihelper.addUser(username: username, password: pass, zipcode: zipcode, iid: iid, ip: ip) { (result) in
+            print(result)
+        }
+        
+        self.performSegue(withIdentifier: "toLogin", sender: self)
         
         
-//        Auth.auth().createUser(withEmail: email, password: pass) {user, error in
+        
+//        Auth.auth().createUser(withiid: iid, password: pass) {user, error in
 //            if error == nil && user != nil {
 //                print("User created")
 //            }else{

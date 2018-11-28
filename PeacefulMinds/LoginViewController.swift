@@ -145,6 +145,17 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         setContinueButton(enabled: false)
         continueButton.setTitle("", for: .normal)
         activityView.startAnimating()
+        self.performSegue(withIdentifier: "toTabBar", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is UINavigationController
+        {
+            let navVC = segue.destination as? UINavigationController
+            
+            let vc = navVC?.viewControllers.first as! ResultsViewController
+            
+            vc.username = emailField.text
+        }
     }
 }
 
