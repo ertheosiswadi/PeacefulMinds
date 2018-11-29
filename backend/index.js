@@ -19,6 +19,13 @@ app.get('/same_area/:username/:procedure', (request, response)=> {
 		response.send(result);
 	});	
 });
+app.get('/user_details/:username',(request,response)=>
+{
+	var u = request.params.username;
+	getUser(u).then((result)=>{
+		response.send(result);
+	});	
+});
 
 app.get('/:username/:procedure/:hospital', (request, response)=> {
 	console.log('im here 0')
@@ -53,6 +60,7 @@ app.get('/add_user/:username/:password/:zipcode/:insurance_id/:insurance_provide
 		response.send(u + ' account created')
 	})
 });
+
 
 
 app.listen(PORT, ()=> {
