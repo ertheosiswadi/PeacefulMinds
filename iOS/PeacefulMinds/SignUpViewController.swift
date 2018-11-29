@@ -12,7 +12,7 @@ import UIKit
 import Firebase
 
 class SignUpViewController:UIViewController, UITextFieldDelegate {
-    
+    var insurance_names : [String:String]?
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var iidField: UITextField!
     @IBOutlet weak var ipField: UITextField!
@@ -26,7 +26,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //insurance names - this needs some work... not synced with database
+        self.insurance_names = ["Nationwide":"ip_1","State Farm":"ip_2","Allstate":"ip_3"]
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
@@ -155,10 +156,19 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         guard let username = usernameField.text else { return }
         guard let iid = iidField.text else { return }
         guard let pass = passwordField.text else { return }
-        guard let ip = ipField.text else { return }
+        guard var ip = ipField.text else { return }
         guard let zipcode = zipcodeField.text else { return }
         
+        if(ip != "Allstate" && ip != "Nationwide" && ip != "State Farm")
+        {
+            ip = "ip_2"
+        }
+        else{
+            ip = self.insurance_names![ip]!
+        }
+        
         print(username, iid, ip, zipcode, pass)
+        
         
         setContinueButton(enabled: false)
         continueButton.setTitle("", for: .normal)

@@ -148,13 +148,22 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "toTabBar", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is UINavigationController
+        if segue.destination is UITabBarController
         {
-            let navVC = segue.destination as? UINavigationController
-            
-            let vc = navVC?.viewControllers.first as! ResultsViewController
-            
-            vc.username = emailField.text
+            let barViewControllers = segue.destination as! UITabBarController
+            if(barViewControllers.viewControllers![1] is UINavigationController)
+            {
+                let nav = barViewControllers.viewControllers![1] as! UINavigationController
+                let destinationViewController = nav.viewControllers.first as! SearchViewController
+                
+                destinationViewController.username = emailField.text!
+                print("login username-> " , emailField.text!)
+            }
+            if(barViewControllers.viewControllers![0] is ProfileViewController)
+            {
+                let vc = barViewControllers.viewControllers![0] as! ProfileViewController
+                vc.username = emailField.text!
+            }
         }
     }
 }

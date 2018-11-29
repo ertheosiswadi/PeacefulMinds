@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25836E5E1FAAF6EA5BBDDB10 /* Pods_PeacefulMinds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C2EC96E6BE1AF2A1E7F2F4 /* Pods_PeacefulMinds.framework */; };
+		A000149D21AF4D8600BD14C5 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A000149C21AF4D8500BD14C5 /* profile.png */; };
 		A01E413C21A3918E00EF03B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E413B21A3918E00EF03B5 /* AppDelegate.swift */; };
 		A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01E413D21A3918E00EF03B5 /* ViewController.swift */; };
 		A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01E414221A3918F00EF03B5 /* logo.xcassets */; };
@@ -25,6 +26,9 @@
 		A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */; };
 		A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079609921A3A2550062678C /* SignUpViewController.swift */; };
 		A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A079609B21A3A2D50062678C /* GoogleService-Info.plist */; };
+		A0D56A4321AF183E003159D5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D56A4221AF183E003159D5 /* SearchViewController.swift */; };
+		A0D56A4521AF214D003159D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D56A4421AF214D003159D5 /* ProfileViewController.swift */; };
+		A0D56A4A21AF23C1003159D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D56A4921AF23C1003159D5 /* Images.xcassets */; };
 		A0D5D10221AD44C30032CD27 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */; };
 		A0D5D10421AD4F690032CD27 /* HospitalTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D5D10321AD4F690032CD27 /* HospitalTableView.xib */; };
 		A0D5D10621AD4FC90032CD27 /* HospitalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D5D10521AD4FC90032CD27 /* HospitalTableView.swift */; };
@@ -35,6 +39,7 @@
 		0766382AC154AB8162939156 /* Pods-PeacefulMinds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeacefulMinds.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds.release.xcconfig"; sourceTree = "<group>"; };
 		94C2EC96E6BE1AF2A1E7F2F4 /* Pods_PeacefulMinds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeacefulMinds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97377EE2AC8CFE5F305E596C /* Pods-PeacefulMinds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeacefulMinds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeacefulMinds/Pods-PeacefulMinds.debug.xcconfig"; sourceTree = "<group>"; };
+		A000149C21AF4D8500BD14C5 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = Images.xcassets/profile.png; sourceTree = "<group>"; };
 		A01E413821A3918E00EF03B5 /* PeacefulMinds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeacefulMinds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01E413B21A3918E00EF03B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01E413D21A3918E00EF03B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		A079609721A3A0BE0062678C /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
 		A079609921A3A2550062678C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A079609B21A3A2D50062678C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A0D56A4221AF183E003159D5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A0D56A4421AF214D003159D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A0D56A4921AF23C1003159D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		A0D5D10321AD4F690032CD27 /* HospitalTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalTableView.xib; sourceTree = "<group>"; };
 		A0D5D10521AD4FC90032CD27 /* HospitalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableView.swift; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A078591321AE54B100AF7E6B /* sample_bill.pdf */,
+				A0D56A4221AF183E003159D5 /* SearchViewController.swift */,
 				A079608521A395410062678C /* Main.storyboard */,
 				A079609521A39FED0062678C /* LoginViewController.swift */,
 				A0D5D10121AD44C30032CD27 /* ResultsViewController.swift */,
@@ -123,6 +132,9 @@
 				A078590E21AE424400AF7E6B /* BillViewController.swift */,
 				A078591621AE8D1200AF7E6B /* Montserrat-Regular.ttf */,
 				A078591521AE8D1200AF7E6B /* Montserrat-SemiBold.ttf */,
+				A0D56A4421AF214D003159D5 /* ProfileViewController.swift */,
+				A0D56A4921AF23C1003159D5 /* Images.xcassets */,
+				A000149C21AF4D8500BD14C5 /* profile.png */,
 			);
 			path = PeacefulMinds;
 			sourceTree = "<group>";
@@ -205,12 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A078591721AE8FB800AF7E6B /* Montserrat-Regular.ttf in Resources */,
+				A0D56A4A21AF23C1003159D5 /* Images.xcassets in Resources */,
 				A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */,
 				A079609C21A3A2D50062678C /* GoogleService-Info.plist in Resources */,
 				A078591421AE54B100AF7E6B /* sample_bill.pdf in Resources */,
 				A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */,
 				A0D5D10421AD4F690032CD27 /* HospitalTableView.xib in Resources */,
 				A078591821AE8FBA00AF7E6B /* Montserrat-SemiBold.ttf in Resources */,
+				A000149D21AF4D8600BD14C5 /* profile.png in Resources */,
 				A079608621A395410062678C /* Main.storyboard in Resources */,
 				A078591221AE516F00AF7E6B /* sample_bill.pdf in Resources */,
 			);
@@ -268,10 +282,12 @@
 				A079609021A39B3A0062678C /* InitialViewController.swift in Sources */,
 				A079609A21A3A2550062678C /* SignUpViewController.swift in Sources */,
 				A01E413E21A3918E00EF03B5 /* ViewController.swift in Sources */,
+				A0D56A4521AF214D003159D5 /* ProfileViewController.swift in Sources */,
 				A079609421A39D790062678C /* HelperExtensions.swift in Sources */,
 				A078590F21AE424400AF7E6B /* BillViewController.swift in Sources */,
 				A0D5D10221AD44C30032CD27 /* ResultsViewController.swift in Sources */,
 				A01E413C21A3918E00EF03B5 /* AppDelegate.swift in Sources */,
+				A0D56A4321AF183E003159D5 /* SearchViewController.swift in Sources */,
 				A079609221A39BD50062678C /* MenuViewController.swift in Sources */,
 				A079609821A3A0BE0062678C /* RoundedWhiteButton.swift in Sources */,
 				A0D5D10821ADEC230032CD27 /* APIHelper.swift in Sources */,
@@ -415,6 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZZ43897VS;
 				INFOPLIST_FILE = PeacefulMinds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZZ43897VS;
 				INFOPLIST_FILE = PeacefulMinds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -146,6 +146,52 @@ class APIHelper {
         
         task.resume()
     }
+    func getUser(username:String, completeHandler: @escaping (_ profile: [String:Any]) -> ())
+    {
+        let uri = "https://peaceful-minds.herokuapp.com/user_details/\(username)";
+        let endpoint:String = uri
+        print("debug - get - url \(endpoint)")
+        let url = URL(string: endpoint)
+        let urlRequest = URLRequest(url: url!)
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+        var toReturn:[String:Any] = [:]
+        
+        let task = session.dataTask(with: urlRequest, completionHandler: {(data, response, error) -> Void in
+            
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                //send emptystring to callback func completeHandler
+                completeHandler([:])
+                return
+            }
+            
+            do
+            {
+                guard let json_obj = try JSONSerialization.jsonObject(with: responseData, options: [])as? [String: Any]
+                    else{
+                        completeHandler([:])
+                        return
+                }
+                
+                print("data fetched is: ", json_obj)
+                toReturn = json_obj
+                
+                completeHandler(toReturn)
+                DispatchQueue.main.async {
+                }
+            }
+            catch
+            {
+                print("error jsonserial")
+                completeHandler([:])
+                return
+            }
+        })
+        
+        task.resume()
+    }
     
 }
 

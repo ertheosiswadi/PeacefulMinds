@@ -492,18 +492,5 @@ class ResultsViewController: UIViewController {
         self.performSegue(withIdentifier: "toBill", sender: self)
     }
 }
-extension UIView {
-    func roundCorners_v1(cornerRadius: Double) {
-        self.layer.cornerRadius = CGFloat(cornerRadius)
-        self.clipsToBounds = true
-        self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    }
-    func roundCorners_v2(cornerRadius: Double) {
-        self.layer.cornerRadius = CGFloat(cornerRadius)
-        self.clipsToBounds = true
-        self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-    }
-    
-}
 
 
