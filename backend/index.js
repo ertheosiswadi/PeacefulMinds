@@ -347,7 +347,7 @@ async function generateHospitalTable(username, procedure, hospital)
 	var isDeductibleLessThan = false;
 	if(deductible <= total_post_adj)
 	{
-		total_owe = deductible + ((total_post_adj - deductible) * coverage)/100
+		total_owe = deductible + ((total_post_adj - deductible) * (100-coverage))/100
 		isDeductibleLessThan = true;
 	}
 	else
