@@ -12,6 +12,7 @@ import UIKit
 class SearchViewController: UIViewController {
     
     var username : String?
+    var procedure : String?
     
     @IBOutlet weak var searchField: UITextField!{
         didSet {
@@ -23,6 +24,7 @@ class SearchViewController: UIViewController {
     }
     @IBOutlet weak var searchButton: UIButton!
     @IBAction func searchAction(_ sender: Any) {
+        self.procedure = searchField.text
         self.performSegue(withIdentifier: "toResults", sender: self)
     }
     
@@ -45,6 +47,7 @@ class SearchViewController: UIViewController {
             let resViewController = segue.destination as! ResultsViewController
             
             resViewController.username = self.username!
+            resViewController.procedure = self.procedure!
         }
     }
 }

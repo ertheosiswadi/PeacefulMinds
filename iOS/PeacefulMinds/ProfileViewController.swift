@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         //insurance names - this needs some work... not synced with database
-        self.insurance_names = ["ip_1": "Nationwide","ip_2": "State Farm","ip_3": "Allstate"]
+        self.insurance_names = ["ip_1": "Cigna","ip_2": "Aetna","ip_3": "Blueshield"]
         
         hiLabel.textColor = UIColor.white
         nameLabel.textColor = UIColor.white

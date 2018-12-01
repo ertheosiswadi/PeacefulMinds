@@ -14,7 +14,6 @@
 		A01E414321A3918F00EF03B5 /* logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01E414221A3918F00EF03B5 /* logo.xcassets */; };
 		A01E414621A3918F00EF03B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01E414421A3918F00EF03B5 /* LaunchScreen.storyboard */; };
 		A078590F21AE424400AF7E6B /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078590E21AE424400AF7E6B /* BillViewController.swift */; };
-		A078591221AE516F00AF7E6B /* sample_bill.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A078591121AE516F00AF7E6B /* sample_bill.pdf */; };
 		A078591421AE54B100AF7E6B /* sample_bill.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A078591321AE54B100AF7E6B /* sample_bill.pdf */; };
 		A078591721AE8FB800AF7E6B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A078591621AE8D1200AF7E6B /* Montserrat-Regular.ttf */; };
 		A078591821AE8FBA00AF7E6B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A078591521AE8D1200AF7E6B /* Montserrat-SemiBold.ttf */; };
@@ -226,7 +225,6 @@
 				A078591821AE8FBA00AF7E6B /* Montserrat-SemiBold.ttf in Resources */,
 				A000149D21AF4D8600BD14C5 /* profile.png in Resources */,
 				A079608621A395410062678C /* Main.storyboard in Resources */,
-				A078591221AE516F00AF7E6B /* sample_bill.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,14 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZZ43897VS;
+				DEVELOPMENT_TEAM = V6TRQV5H78;
 				INFOPLIST_FILE = PeacefulMinds/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apic.PeacefulMinds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apic.PeacefulMindsss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,14 +447,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZZ43897VS;
+				DEVELOPMENT_TEAM = V6TRQV5H78;
 				INFOPLIST_FILE = PeacefulMinds/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.apic.PeacefulMinds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apic.PeacefulMindsss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

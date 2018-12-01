@@ -16,6 +16,8 @@ class ResultsViewController: UIViewController {
     var activityView:UIActivityIndicatorView!
     
     var username : String?
+    var procedure : String?
+    var procedure_names : [String:String]?
     
     var part_2 : [String:Any] = [:]
     var s_array : Array<[String:Any]> = []
@@ -31,6 +33,8 @@ class ResultsViewController: UIViewController {
             print(received_username)
         }
         
+        let procedure_names = ["Angioplasty":"procedure_1","Gastrectomy":"procedure_2","Fundoplication":"procedure_3"]
+        
         //create the activity view
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         activityView.color = secondaryColor
@@ -40,11 +44,9 @@ class ResultsViewController: UIViewController {
         view.addSubview(activityView)
         activityView.startAnimating()
         DispatchQueue.global(qos: .background).async{
-            self.apihelper.getHospitalsInArea(username: self.username!, procedure: "procedure_2"){ (result) in
+            self.apihelper.getHospitalsInArea(username: self.username!, procedure: procedure_names[self.procedure!]!){ (result) in
                 
                 print(result[0])
-                
-                
                 
                 DispatchQueue.main.async {
                     self.activityView.stopAnimating()
@@ -155,7 +157,8 @@ class ResultsViewController: UIViewController {
         label_total.font = UIFont(name: "Montserrat-Regular", size: 12)
         label_total.textColor = secondaryColor
         let label_total_val = UILabel(frame: CGRect(x: xpos + 120 + 15, y: ypos, width: 120, height: 20))
-        label_total_val.text = "$\(p2["total_post_adj"]!)"
+        let tot_val = Double(p2["total_post_adj"]! as! Double)
+        label_total_val.text = "$\(String(format: "%.2f", tot_val))"
         label_total_val.font = UIFont(name: "Montserrat-Regular", size: 12)
         label_total_val.textColor = secondaryColor
         
@@ -188,7 +191,8 @@ class ResultsViewController: UIViewController {
         label_totalowe.font = UIFont(name: "Montserrat-SemiBold", size: 17)
         label_totalowe.textColor = secondaryColor
         let label_totalowe_val = UILabel(frame: CGRect(x: xpos + 120 + 15, y: ypos, width: 120, height: 30))
-        label_totalowe_val.text = "$\(p2["total_owe"]!)"
+        let tot_owe_val = Double(p2["total_owe"]! as! Double)
+        label_totalowe_val.text = "$\(String(format: "%.2f", tot_owe_val))"
         label_totalowe_val.font = UIFont(name: "Montserrat-SemiBold", size: 17)
         label_totalowe_val.textColor = secondaryColor
         

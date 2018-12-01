@@ -27,7 +27,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //insurance names - this needs some work... not synced with database
-        self.insurance_names = ["Nationwide":"ip_1","State Farm":"ip_2","Allstate":"ip_3"]
+        self.insurance_names = ["Cigna":"ip_1","Aetna":"ip_2","Blueshield":"ip_3"]
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
@@ -159,7 +159,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         guard var ip = ipField.text else { return }
         guard let zipcode = zipcodeField.text else { return }
         
-        if(ip != "Allstate" && ip != "Nationwide" && ip != "State Farm")
+        if(ip != "Cigna" && ip != "Aetna" && ip != "Blueshield")
         {
             ip = "ip_2"
         }
